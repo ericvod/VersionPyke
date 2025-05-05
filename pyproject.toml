@@ -1,0 +1,24 @@
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "versionpyke"
+version = "0.1.0"
+description = "Local versioning system in Python"
+authors = ["Eric Dourado <ericdourado1@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [
+    { include = "versionpyke" }
+]
+
+[tool.poetry.dependencies]
+python = ">=3.8,<4.0"
+
+[tool.poetry.scripts]
+vpk = "versionpyke.cli.main:main"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.0"
+black = "^23.0"
